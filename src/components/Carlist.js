@@ -60,7 +60,7 @@ export default function Carlist() {
       },
         body: JSON.stringify(car)
       })
-      .then(res => gridRef.current.redrawRows({rowNodes: getCars()}))
+      .then(_ => gridRef.current.redrawRows({rowNodes: getCars()}))
       .catch( err => console.error(err))
   }
 
