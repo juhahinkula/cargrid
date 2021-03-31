@@ -122,6 +122,7 @@ export default function Carlist() {
       field: 'price',
       sortable: true,
       floatingFilter: true,
+      width: 120,
       filter: 'agNumberColumnFilter',
     },
     {
@@ -145,7 +146,7 @@ export default function Carlist() {
   ]
 
   return(
-    <div className="ag-theme-material" style={{height: '600px', width: '100%'}}>
+    <div className="ag-theme-material" style={{height: '550px', width: '95%'}}>
       <Grid container spacing={2}>
         <Grid item xs={2}>
           <Addcar addCar={addCar} />
