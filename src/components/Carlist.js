@@ -35,12 +35,14 @@ export default function Carlist() {
     if (window.confirm('Are you sure?')) {
       fetch(link, {method: 'DELETE'})
       .then(response => {
-        if (status.ok)
+        if (response.ok) {
           getCars();
-        else
+          setOpen(true);
+        }
+        else {
           alert('Something went wrong');
+        }
       })
-      .then(_ => setOpen(true))
       .catch(err => console.error(err))
     }
   }
